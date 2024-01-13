@@ -1,12 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import { StarField } from '../components/StarField.tsx';
+import StarFieldBG from '../components/StarFieldBG.tsx';
+import StarField from '../components/starField/StarField.jsx';
 ---
 
-<StarField client:load />
 <Layout title="Welcome to Astro.">
 	<main>
+		<StarField client:only/>
 		<svg
 			class="astro-a"
 			width="495"
