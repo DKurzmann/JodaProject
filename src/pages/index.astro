@@ -1,8 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import StarFieldBG from '../components/StarFieldBG.tsx';
-import StarFieldCanvas from '../components/starField/StarFieldCanvas.jsx';
 import {StarField} from '../components/StarField.tsx';
 ---
 
@@ -68,9 +66,7 @@ import {StarField} from '../components/StarField.tsx';
 	</main>
 </div>
 <div class="background">
-	<StarFieldCanvas client:only>
-	</StarFieldCanvas>
-	
+	<StarField client:load/>
 </div>
 </div>
 </Layout>

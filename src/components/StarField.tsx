@@ -81,6 +81,7 @@ export const StarField: React.FC<Props> = ({
     ref={canvasRef}
     {...{ width, height }}
     {...restProps}
+    style={{position: "absolute", height: "100%", width: "100%"}} 
   />
 }
 
@@ -88,7 +89,7 @@ StarField.defaultProps = {
   width: 300,
   height: 300,
   count: 3000,
-  speed: 3,
+  speed: 0.5,
   starRatio: 356,
   starSize: 1.4,
   starStyle: '#fff',
