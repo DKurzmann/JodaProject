@@ -1,6 +1,6 @@
 import {useWindowSize} from 'react-use';
 
-    export default function StarField() {
+    export default function StarFieldCanvas() {
     const { width, height } = useWindowSize();
     
     return (
