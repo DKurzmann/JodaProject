@@ -5,7 +5,7 @@ import {useWindowSize} from 'react-use';
     
     return (
 
-          <canvas id="myCanvas" width="200" height="100" style={{border:"1px",backgroundColor: "lightblue"}}>
+          <canvas id="myCanvas"  style={{border:"1px",backgroundColor: "lightblue", position: "absolute", height: "100%", width: "100%"}}>
            </canvas>
 
   );
