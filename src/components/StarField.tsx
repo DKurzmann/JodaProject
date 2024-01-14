@@ -86,8 +86,8 @@ export const StarField: React.FC<Props> = ({
 }
 
 StarField.defaultProps = {
-  width: 300,
-  height: 300,
+  width: window.innerWidth,
+  height: window.innerHeight,
   count: 3000,
   speed: 0.5,
   starRatio: 356,
