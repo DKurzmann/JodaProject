@@ -1,2 +1,2 @@
-export { StarField } from './StarField'
+export { StarField } from '.'
 export { useStarField } from './useStarField'

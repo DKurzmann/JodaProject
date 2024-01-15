@@ -1,6 +1,6 @@
 import { type MutableRefObject, type RefObject, useEffect } from 'react'
-import { type ColorFunction, createStarsState, type StarFieldState } from './StarState'
-import { drawStarField } from './drawStarField'
+import { type ColorFunction, createStarsState, type StarFieldState } from '../starField/StarState'
+import { drawStarField } from '../starField/drawStarField'
 
 export interface Options {
   count: number
@@ -11,7 +11,7 @@ export interface Options {
   height: number
   starStyle?: ColorFunction | string
   clear: boolean
-  starShape: 'butt' | 'round' | 'square'
+  starShape: 'butt' | 'round' | 'squa‚re'
   bgStyle: string
   fps: number
   noBackground: boolean
