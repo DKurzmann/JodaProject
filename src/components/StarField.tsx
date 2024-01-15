@@ -56,11 +56,13 @@ export const StarField: React.FC<Props> = ({
   ...restProps
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const stateReference = useRef<StarFieldState>(createStarsState({
+  let stateReference = useRef<StarFieldState>()
+
+  stateReference.current = createStarsState({
     count,
     height,
     width,
-  }))
+    })
 
   useStarField(canvasRef, {
     width,
