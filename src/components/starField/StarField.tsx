@@ -83,7 +83,7 @@ export const StarField: React.FC<Props> = ({
     ref={canvasRef}
     {...{ width, height }}
     {...restProps}
-    style={{position: "absolute", height: "100%", width: "100%"}} 
+    style={{position: "absolute", height: "100%", width: "100%", zIndex:"-10"}} 
   />
 }
 
