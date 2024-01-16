@@ -15,7 +15,7 @@ export interface Options {
   height: number
   starStyle?: ColorFunction | string
   clear: boolean
-  starShape: 'butt' | 'round' | 'squa‚re'
+  starShape: 'butt' | 'round' | 'square'
   bgStyle: string
   fps: number
   noBackground: boolean
