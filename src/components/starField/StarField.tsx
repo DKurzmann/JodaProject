@@ -97,6 +97,6 @@ StarField.defaultProps = {
   starStyle: '#fff',
   starShape: 'round',
   clear: true,
-  bgStyle: '#000',
+  bgStyle: '#191818',
   noBackground: false,
 }
