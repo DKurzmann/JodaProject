@@ -71,9 +71,12 @@ export function drawStarField({
     star.stepX = x + (star.x / star.z) * starRatio
     star.stepY = y + (star.y / star.z) * starRatio
 
-    drawStarStep = drawStarStep &&
-      currentX > 0 && currentX < width &&
-      currentY > 0 && currentY < height
+    drawStarStep =
+      drawStarStep &&
+      currentX > 0 &&
+      currentX < width &&
+      currentY > 0 &&
+      currentY < height
 
     if (drawStarStep) {
       context.beginPath()

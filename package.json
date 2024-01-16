@@ -18,5 +18,8 @@
     "react-dom": "^18.2.0",
     "react-use": "^17.4.2",
     "starfield-react": "^3.1.0-dev-5"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.2"
   }
 }

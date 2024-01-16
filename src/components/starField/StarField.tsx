@@ -39,7 +39,6 @@ interface Props {
 
 type ColorFunction = () => string
 
-
 export const StarField: React.FC<Props> = ({
   width,
   height,
@@ -62,29 +61,40 @@ export const StarField: React.FC<Props> = ({
     count,
     height,
     width,
-    })
+  })
 
-  useStarField(canvasRef, {
-    width,
-    height,
-    starStyle,
-    bgStyle,
-    count,
-    fps,
-    speed,
-    starRatio,
-    starShape,
-    starSize,
-    clear,
-    noBackground,
-  }, stateReference)
+  useStarField(
+    canvasRef,
+    {
+      width,
+      height,
+      starStyle,
+      bgStyle,
+      count,
+      fps,
+      speed,
+      starRatio,
+      starShape,
+      starSize,
+      clear,
+      noBackground,
+    },
+    stateReference,
+  )
 
-  return <canvas 
-    ref={canvasRef}
-    {...{ width, height }}
-    {...restProps}
-    style={{position: "absolute", height: "100%", width: "100%", zIndex:"-10"}} 
-  />
+  return (
+    <canvas
+      ref={canvasRef}
+      {...{ width, height }}
+      {...restProps}
+      style={{
+        position: 'absolute',
+        height: '100%',
+        width: '100%',
+        zIndex: '-10',
+      }}
+    />
+  )
 }
 
 StarField.defaultProps = {

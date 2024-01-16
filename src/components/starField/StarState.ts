@@ -17,7 +17,11 @@ export interface StarState {
 
 export type ColorFunction = () => string
 
-export function createStarsState(options: { width: number, height: number, count: number }): StarFieldState {
+export function createStarsState(options: {
+  width: number
+  height: number
+  count: number
+}): StarFieldState {
   let width = options.width
   let height = options.height
 

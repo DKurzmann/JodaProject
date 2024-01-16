@@ -1,5 +1,9 @@
 import { type MutableRefObject, type RefObject, useEffect } from 'react'
-import { type ColorFunction, createStarsState, type StarFieldState } from '../starField/StarState'
+import {
+  type ColorFunction,
+  createStarsState,
+  type StarFieldState,
+} from '../starField/StarState'
 import { drawStarField } from '../starField/drawStarField'
 
 export interface Options {
@@ -22,11 +26,13 @@ export function useStarField(
   options: Options,
   stateReference?: MutableRefObject<StarFieldState>,
 ) {
-  const initialState = stateReference.current || createStarsState({
-    count: options.count,
-    height: options.height,
-    width: options.width,
-  })
+  const initialState =
+    stateReference.current ||
+    createStarsState({
+      count: options.count,
+      height: options.height,
+      width: options.width,
+    })
 
   if (options.count !== initialState.stars.length) {
     if (initialState.stars.length < options.count) {
@@ -46,7 +52,8 @@ export function useStarField(
     const starLineWidthRatio = 1 / initialState.z
     const { speed, starRatio, starSize } = options
 
-    context.strokeStyle = typeof options.starStyle === 'string' && options.starStyle
+    context.strokeStyle =
+      typeof options.starStyle === 'string' && options.starStyle
     context.lineCap = options.starShape
 
     let animationFrameId
@@ -85,4 +92,3 @@ export function useStarField(
     return () => cancelAnimationFrame(animationFrameId)
   }, [options])
 }
-
