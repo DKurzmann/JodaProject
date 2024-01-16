@@ -3,5 +3,9 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.bracketSameLine": true,
   "prettier.singleQuote": true,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "prettier.documentSelectors": ["**/*.astro"],
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
