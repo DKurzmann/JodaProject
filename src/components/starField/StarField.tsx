@@ -88,7 +88,7 @@ export const StarField: React.FC<Props> = ({
       {...{ width, height }}
       {...restProps}
       style={{
-        position: 'absolute',
+        position: 'fixed',
         height: '100%',
         width: '100%',
         zIndex: '-10',
