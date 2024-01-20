@@ -1,6 +1,8 @@
 import { Transition } from '@headlessui/react'
 
 export default function Header() {
+  const navStartPageID = 'navStartPageID'
+  const navGuestBookID = 'navGuestBookID'
   return (
     <div
       id="headerID"
@@ -16,28 +18,27 @@ export default function Header() {
         leaveTo="opacity-0 scale-95">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-6">
-            <button id="navStartPageID" onClick={(e) => buttonClick(e)}>
+            <button id={navStartPageID} onClick={(e) => buttonClick(e)}>
               <h2>Joda Development</h2>
             </button>
           </div>
-          <button id="navGuestBookID" onClick={(e) => buttonClick(e)}>
+          <button id={navGuestBookID} onClick={(e) => buttonClick(e)}>
             <h2>Guestbook</h2>
           </button>
         </div>
       </Transition>
     </div>
   )
-}
-
-function buttonClick(e) {
-  const id = e.currentTarget.id
-  var startPageElement = document.getElementById('startPageID')
-  var guestBookElement = document.getElementById('guestBookID')
-  if (id == 'navStartPageID') {
-    startPageElement.style.visibility = 'visible'
-    guestBookElement.style.visibility = 'hidden'
-  } else if (id == 'navGuestBookID') {
-    guestBookElement.style.visibility = 'visible'
-    startPageElement.style.visibility = 'hidden'
+  function buttonClick(e) {
+    const id = e.currentTarget.id
+    var startPageElement = document.getElementById('startPageID')
+    var guestBookElement = document.getElementById('guestBookID')
+    if (id == navStartPageID) {
+      startPageElement.style.visibility = 'visible'
+      guestBookElement.style.visibility = 'hidden'
+    } else if (id == navGuestBookID) {
+      guestBookElement.style.visibility = 'visible'
+      startPageElement.style.visibility = 'hidden'
+    }
   }
 }
