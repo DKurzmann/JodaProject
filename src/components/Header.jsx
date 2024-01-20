@@ -16,15 +16,28 @@ export default function Header() {
         leaveTo="opacity-0 scale-95">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-6">
-            <a href="/">
+            <button id="navStartPageID" onClick={(e) => buttonClick(e)}>
               <h2>Joda Development</h2>
-            </a>
+            </button>
           </div>
-          <a href="/guestbook">
+          <button id="navGuestBookID" onClick={(e) => buttonClick(e)}>
             <h2>Guestbook</h2>
-          </a>
+          </button>
         </div>
       </Transition>
     </div>
   )
+}
+
+function buttonClick(e) {
+  const id = e.currentTarget.id
+  var startPageElement = document.getElementById('startPageID')
+  var guestBookElement = document.getElementById('guestBookID')
+  if (id == 'navStartPageID') {
+    startPageElement.style.visibility = 'visible'
+    guestBookElement.style.visibility = 'hidden'
+  } else if (id == 'navGuestBookID') {
+    guestBookElement.style.visibility = 'visible'
+    startPageElement.style.visibility = 'hidden'
+  }
 }
