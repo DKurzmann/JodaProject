@@ -19,11 +19,11 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-6">
             <button id={navStartPageID} onClick={(e) => buttonClick(e)}>
-              <h2>Joda Development</h2>
+              <h2 style={{ color: 'white' }}>Joda Development</h2>
             </button>
           </div>
           <button id={navGuestBookID} onClick={(e) => buttonClick(e)}>
-            <h2>Guestbook</h2>
+            <h2 style={{ color: 'white' }}>Guestbook</h2>
           </button>
         </div>
       </Transition>
