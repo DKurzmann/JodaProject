@@ -53,11 +53,11 @@ export default function Header() {
     var startPageElement = document.getElementById('startPageID')
     var guestBookElement = document.getElementById('guestBookID')
     if (id == navStartPageID) {
-      startPageElement.style.visibility = 'visible'
-      guestBookElement.style.visibility = 'hidden'
+      startPageElement.style.display = 'block'
+      guestBookElement.style.display = 'none'
     } else if (id == navGuestBookID) {
-      guestBookElement.style.visibility = 'visible'
-      startPageElement.style.visibility = 'hidden'
+      guestBookElement.style.display = 'block'
+      startPageElement.style.display = 'none'
     }
   }
 }
