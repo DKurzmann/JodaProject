@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro'
 import { Image } from 'astro:assets'
 import davidProfileImage from '../images/David.png'
+import johannaProfileImage from '../images/Johanna.png'
 ---
 
 <Layout title="Joda Development">
@@ -15,13 +16,22 @@ import davidProfileImage from '../images/David.png'
         die Entwicklung von Webseiten und Webanwendungen spezialisiert haben.
         Dabei setzen wir auf moderne Technologien und einzigartige Designs.
       </h2>
-      <Image
-        src={davidProfileImage}
-        alt="A AI generated picture of David"
-        width="200"
-        height="200"
-        style={{ borderRadius: '9999px' }}
-      />
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <Image
+          src={davidProfileImage}
+          alt="A AI generated picture of David"
+          width="200"
+          height="200"
+          style={{ borderRadius: '9999px', margin: '0 1em' }}
+        />
+        <Image
+          src={johannaProfileImage}
+          alt="A AI generated picture of Johanna"
+          width="200"
+          height="200"
+          style={{ borderRadius: '9999px' }}
+        />
+      </div>
       <p>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
         eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
