@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/react": "^3.0.9",
     "@astrojs/tailwind": "^5.1.0",
+    "@calcom/embed-react": "^1.3.2",
     "@headlessui/react": "^1.7.18",
     "@nanostores/react": "^0.7.1",
     "@prisma/client": "^5.9.1",
